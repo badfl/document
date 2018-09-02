@@ -24,7 +24,6 @@ module.exports = {
     repo: 'https://github.com/badfl/document',
     editLinks: true,
     displayAllHeaders: true,
-    sidebar: 'auto',
     docsDir: 'docs',
     // #697 Provided by the official algolia team.
     algolia: {
@@ -45,16 +44,68 @@ module.exports = {
         },
         nav: [
           {
-            text: '指南',
-            link: '/zh/guide/',
-          },
-          {
-            text: '配置',
-            link: '/zh/config/'
-          },
-          {
-            text: '默认主题',
-            link: '/zh/default-theme-config/'
+            text:'Vue.js',
+            items:[
+              {
+                text:'学习',
+                items:[
+                  {
+                    text:'教程',
+                    link:'/zh/vue/'
+                  },
+                  {
+                    text:'API',
+                    link:'/zh/vue/'
+                  },
+                  {
+                    text:'风格指南',
+                    link:'/zh/vue/'
+                  },
+                  {
+                    text:'示例',
+                    link:'/zh/vue/'
+                  },
+                  {
+                    text:'Cookbook',
+                    link:'/zh/vue/'
+                  }
+                ]
+              },
+              {
+                text:'工具',
+                items:[
+                  {
+                    text:'Devtools',
+                    link:'/zh/vue/'
+                  },
+                  {
+                    text:'Webpack模版',
+                    link:'/zh/vue/'
+                  },
+                  {
+                    text:'Vue Loader',
+                    link:'/zh/vue/'
+                  }
+                ]
+              },
+              {
+                text:'核心插件',
+                items:[
+                  {
+                    text:'Vue Router',
+                    link:'/zh/vue/'
+                  },
+                  {
+                    text:'Vuex',
+                    link:'/zh/vue/'
+                  },
+                  {
+                    text:'Vue 服务端渲染',
+                    link:'/zh/vue/'
+                  }
+                ]
+              }
+            ]
           },
           {
             text:'风格指南',
@@ -63,13 +114,18 @@ module.exports = {
           {
             text:'Dcloud',
             items: [
-              { text: 'FQA', items: [
+              {
+                text: 'FQA',
+                items: [
                   {
                     text:'自己整理',
                     link:'/zh/mui/'
                   }
-                ] },
-              { text: '官方文档', items: [
+                ]
+              },
+              {
+                text: '官方文档',
+                items: [
                   {
                     text: 'mui文档',
                     link: 'http://dev.dcloud.net.cn/mui/ui/'
@@ -78,18 +134,47 @@ module.exports = {
                     text: 'html5+文档',
                     link: 'http://www.html5plus.org/doc/zh_cn/webview.html'
                   }
-                ] }
+                ]
+              },
+              {
+                text: '社区',
+                items: [
+                  {
+                    text: '问答社区',
+                    link: 'http://ask.dcloud.net.cn/explore/'
+                  },
+                  {
+                    text: 'Dcloud官网',
+                    link: 'http://www.dcloud.io/'
+                  }
+
+                ]
+              }
             ]
           }
 
         ],
         sidebar: {
-          '/zh/guide/': genSidebarConfig('指南')
+          '/zh/guide/': genSidebarConfig('指南'),
+          '/zh/mui/': [{
+            title:'mui',
+            children:[
+              '',
+              'mui-tableview',
+              'mui-popover',
+              'mui-btn',
+              'mui-card',
+              'mui-dialog',
+              'mui-input'
+            ]
+           }
+
+          ]
         }
       }
     }
   }
-}
+};
 
 function genSidebarConfig (title) {
   return [
@@ -111,3 +196,4 @@ function genSidebarConfig (title) {
     }
   ]
 }
+
