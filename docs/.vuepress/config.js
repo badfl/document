@@ -2,11 +2,6 @@ module.exports = {
   dest: 'vuepress',
   locales: {
     '/': {
-      lang: 'en-US',
-      title: 'VuePress',
-      description: 'Vue-powered Static Site Generator'
-    },
-    '/zh/': {
       lang: 'zh-CN',
       title: 'VuePress',
       description: 'Vue 驱动的静态网站生成器'
@@ -26,8 +21,10 @@ module.exports = {
   serviceWorker: true,
   theme: 'vue',
   themeConfig: {
-    repo: 'vuejs/vuepress',
+    repo: 'https://github.com/badfl/document',
     editLinks: true,
+    displayAllHeaders: true,
+    sidebar: 'auto',
     docsDir: 'docs',
     // #697 Provided by the official algolia team.
     algolia: {
@@ -36,39 +33,6 @@ module.exports = {
     },
     locales: {
       '/': {
-        label: 'English',
-        selectText: 'Languages',
-        editLinkText: 'Edit this page on GitHub',
-        lastUpdated: 'Last Updated',
-        serviceWorker: {
-          updatePopup: {
-            message: "New content is available.",
-            buttonText: "Refresh"
-          }
-        },
-        nav: [
-          {
-            text: 'Guide',
-            link: '/guide/',
-          },
-          {
-            text: 'Config Reference',
-            link: '/config/'
-          },
-          {
-            text: 'Default Theme Config',
-            link: '/default-theme-config/'
-          },
-          {
-            text: 'Changelog',
-            link: 'https://github.com/vuejs/vuepress/blob/master/CHANGELOG.md'
-          }
-        ],
-        sidebar: {
-          '/guide/': genSidebarConfig('Guide')
-        }
-      },
-      '/zh/': {
         label: '简体中文',
         selectText: '选择语言',
         editLinkText: '在 GitHub 上编辑此页',
@@ -93,9 +57,31 @@ module.exports = {
             link: '/zh/default-theme-config/'
           },
           {
-            text: 'Changelog',
-            link: 'https://github.com/vuejs/vuepress/blob/master/CHANGELOG.md'
+            text:'风格指南',
+            link:'/zh/standard/'
+          },
+          {
+            text:'Dcloud',
+            items: [
+              { text: 'FQA', items: [
+                  {
+                    text:'自己整理',
+                    link:'/zh/mui/'
+                  }
+                ] },
+              { text: '官方文档', items: [
+                  {
+                    text: 'mui文档',
+                    link: 'http://dev.dcloud.net.cn/mui/ui/'
+                  },
+                  {
+                    text: 'html5+文档',
+                    link: 'http://www.html5plus.org/doc/zh_cn/webview.html'
+                  }
+                ] }
+            ]
           }
+
         ],
         sidebar: {
           '/zh/guide/': genSidebarConfig('指南')
@@ -118,8 +104,9 @@ function genSidebarConfig (title) {
         'markdown',
         'using-vue',
         'custom-themes',
-        'i18n',
-        'deploy'
+        'deploy',
+        'i18n'
+
       ]
     }
   ]
