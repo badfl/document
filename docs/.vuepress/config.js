@@ -1,9 +1,9 @@
 module.exports = {
-  dest: 'vuepress',
+  dest: 'document',
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: 'VuePress',
+      title: '技术体系',
       description: 'Vue 驱动的静态网站生成器'
     }
   },
@@ -51,23 +51,23 @@ module.exports = {
                 items:[
                   {
                     text:'教程',
-                    link:'/zh/vue/'
+                    link:'https://cn.vuejs.org/v2/guide/'
                   },
                   {
                     text:'API',
-                    link:'/zh/vue/'
+                    link:'https://cn.vuejs.org/v2/api/'
                   },
                   {
                     text:'风格指南',
-                    link:'/zh/vue/'
+                    link:'https://cn.vuejs.org/v2/style-guide/'
                   },
                   {
                     text:'示例',
-                    link:'/zh/vue/'
+                    link:'https://cn.vuejs.org/v2/examples/'
                   },
                   {
                     text:'Cookbook',
-                    link:'/zh/vue/'
+                    link:'https://cn.vuejs.org/v2/cookbook/'
                   }
                 ]
               },
@@ -76,15 +76,15 @@ module.exports = {
                 items:[
                   {
                     text:'Devtools',
-                    link:'/zh/vue/'
+                    link:'https://github.com/vuejs/vue-devtools'
                   },
                   {
                     text:'Webpack模版',
-                    link:'/zh/vue/'
+                    link:'https://vuejs-templates.github.io/webpack/'
                   },
                   {
                     text:'Vue Loader',
-                    link:'/zh/vue/'
+                    link:'https://vue-loader.vuejs.org/zh/'
                   }
                 ]
               },
@@ -93,15 +93,15 @@ module.exports = {
                 items:[
                   {
                     text:'Vue Router',
-                    link:'/zh/vue/'
+                    link:'https://router.vuejs.org/zh/'
                   },
                   {
                     text:'Vuex',
-                    link:'/zh/vue/'
+                    link:'https://vuex.vuejs.org/zh/'
                   },
                   {
                     text:'Vue 服务端渲染',
-                    link:'/zh/vue/'
+                    link:'https://ssr.vuejs.org/zh/'
                   }
                 ]
               }
@@ -168,7 +168,25 @@ module.exports = {
               'mui-input'
             ]
            }
-
+          ],
+          '/zh/vue/v2/guide/':[
+            {
+              title:'Vue',
+              children:[
+                '',
+              //  'installation',
+                // 'index',
+                // 'instance',
+                // 'syntax',
+                // 'computed',
+                // 'class-and-style',
+                // 'conditional',
+                // 'list',
+                // 'events',
+                // 'forms',
+                // 'components'
+              ]
+            }
           ]
         }
       }
