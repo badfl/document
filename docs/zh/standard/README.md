@@ -109,8 +109,44 @@ var MAX_COUNT = 10;
 var URL = "http://www.badfl.com";
 
 ```
+### 运算符间距
+二元运算符（&&和||）前后必须使用一个空格来保持表达式的整洁。操作符包括赋值运算符
+和逻辑运算符。
+```js
+// 好的写法
+var found = (values[i] === item);
 
-### 原始值
+// 好的写法
+if (found && (count > 10)) {
+    doSomething();
+}
+
+// 好的写法
+for (i = 0; i < count; i++) {
+    process(i);
+}
+
+// 不好的写法：丢失了空格
+var found = (values[i]===item);
+
+// 不好的写法：丢失了空格
+if (found&&(count>10)) {
+    doSomething();
+}
+
+// 不好的写法：丢失了空格
+for (i=0; i<count; i++) {
+    process(i);
+}
+```
+
+### 括号间距
+
+
+### 直接量
+JavaScript中包含了一些类型的原始值：String、Number、Boolean、null、undefinded。
+同样也包含对象直接量和数组直接量。这其中，只有布尔值是自解释的，其他的类型或多或少
+都需要思考一下它们如何才能精确地表示出来。
 
 #### 字符串
 字符串应当始终使用双引号（避免使用单引号）且保持一行。避免在字符串中使用斜线另起一行。
@@ -128,5 +164,88 @@ var longString = "这是一个很长的故事，很长很长的故事 \
 ```
 
 #### 数字
+数字应当使用十进制整数，科学计数法表示整数、十六进制整数或者十进制浮点小数，小数前后应该至少保留一位数字。避免使用八进制直接量。
+```js
+// 好的写法
+var count = 10;
+
+// 好的写法
+var price = 10.0;
+var price = 10.00;
+
+// 好的写法
+var num = 0xA2;
+
+// 好的写法
+var num = le23;
+
+// 不好的写法：十进制数字以小数点结尾
+var price = 10.;
+
+// 不好的写法：十进制数字以小数点开头
+var price = .1;
+
+// 不好的写法：八进制（base 8）写法已经废弃
+var num = 010;
+```
+
+#### null
+特殊值null除了下列情况下应当避免使用。
+* 用来初始化一个变量，这个变量可能被赋值为一个对象。
+* 用来和一个已经初始化的变量比较，这个变量可以是也可以不是一个对象。
+* 当函数的参数期望是对象时，被用做参数传入。
+* 当函数的返回值期望是对象时，被用做返回值传出。
+下面一些场景不应该使用null。
+* 不要使用null来检测是否传入了某个参数。
+* 不要用null来检测一个未初始化的变量。
+```js
+// 好的用法
+var person = null;
+
+// 好的用法
+function getPerson(){
+    if (condition) {
+        return new Person("badfl");
+    } else {
+        return null;
+    }
+}
+
+// 好的用法
+var person = getPerson();
+if (person != null) {
+    doSomething();
+}
+
+// 不好的写法：用来和未初始化的变量比较
+var person;
+if (person != null) {
+    dosomething();
+}
+
+// 不好的写法：检测是否传入了参数
+function doSomething(arg1,arg2,arg3,arg4) {
+    if (arg4 != null) {
+        doSomethingElse();
+    }
+}
+
+```
+
+#### undefined
+undefined是一个特殊值。没有被初始化的变量都有一个初始值，即undefined，表示这个
+变量等待被赋值。尽量避免使用特殊值undefined。判断一个变量是否定义应当使用typeof
+操作符。
+```js
+// 好的写法
+if (typeof variable == "undefinded") {
+    // do something
+}
+
+// 不好的写法：使用undefined直接量
+if (variable == undefinded) {
+    //do something
+}
+```
 
 
