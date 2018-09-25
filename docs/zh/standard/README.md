@@ -141,10 +141,38 @@ for (i=0; i<count; i++) {
 ```
 
 ### 括号间距
+当使用括号时，紧接左括号之后和紧接有括号之前不应该有空格。
+```js
+// 好的写法
+var found = (values[i] === item);
+
+// 好的写法
+if (found && (count > 10)) {
+    doSomething();
+}
+
+// 好的写法
+for (i = 0; i < count; i++) {
+    process(i);
+}
+
+// 不好的写法：左括号之后有额外的空格
+var found = ( values[i] === item);
+
+// 不好的写法：右括号之前有额外的空格
+if (found && (count > 10) ) {
+    doSomething();
+}
+
+// 不好的写法：参数两边有额外的空格
+for (i = 0; i < count; i++) {
+    process( i );
+}
+```
 
 
 ### 直接量
-JavaScript中包含了一些类型的原始值：String、Number、Boolean、null、undefinded。
+JavaScript中包含了一些类型的原始值：`String`、`Number`、`Boolean`、`null`、`undefinded`。
 同样也包含对象直接量和数组直接量。这其中，只有布尔值是自解释的，其他的类型或多或少
 都需要思考一下它们如何才能精确地表示出来。
 
@@ -190,14 +218,14 @@ var num = 010;
 ```
 
 #### null
-特殊值null除了下列情况下应当避免使用。
+特殊值`null`除了下列情况下应当避免使用。
 * 用来初始化一个变量，这个变量可能被赋值为一个对象。
 * 用来和一个已经初始化的变量比较，这个变量可以是也可以不是一个对象。
 * 当函数的参数期望是对象时，被用做参数传入。
 * 当函数的返回值期望是对象时，被用做返回值传出。
-下面一些场景不应该使用null。
-* 不要使用null来检测是否传入了某个参数。
-* 不要用null来检测一个未初始化的变量。
+下面一些场景不应该使用`null`。
+* 不要使用`null`来检测是否传入了某个参数。
+* 不要用`null`来检测一个未初始化的变量。
 ```js
 // 好的用法
 var person = null;
@@ -233,8 +261,8 @@ function doSomething(arg1,arg2,arg3,arg4) {
 ```
 
 #### undefined
-undefined是一个特殊值。没有被初始化的变量都有一个初始值，即undefined，表示这个
-变量等待被赋值。尽量避免使用特殊值undefined。判断一个变量是否定义应当使用typeof
+`undefined`是一个特殊值。没有被初始化的变量都有一个初始值，即`undefined`，表示这个
+变量等待被赋值。尽量避免使用特殊值`undefined`。判断一个变量是否定义应当使用`typeof`
 操作符。
 ```js
 // 好的写法
@@ -248,4 +276,88 @@ if (variable == undefinded) {
 }
 ```
 
+#### 对象直接量
+创建对象最流行的一种做法是使用对象直接量，在直接量中写出所有属性，这种方式可以取代显示地创建`Object`的实例然后添加属性的这种做法。
+```js
+// 好的写法
+var book = {
+
+    title: "badfltitle",
+    author: "badfl"
+};
+
+// 不好的写法
+var book = new Object();
+book.title = "badfltitle";
+book.author = "badfl";
+
+```
+
+对象直接量应当使用如下格式：
+* 起始左花括号应当同表达式保持同一行。
+* 每个属性的名值对应应当保持一个缩进，第一个属性应当在左花括号后另起一行。
+* 每个属性的名值对应当使用不包含引号的属性名，其后紧跟一个冒号（之前不包含空格），
+而后是值。
+* 倘若属性值是函数类型，函数体应当在属性名之下另起一行，而切其前后均应保留一个空行。
+* 一组相关的属性前后可以插入空行以提升代码的可读性。
+* 结束的右花括号应当独占一行。
+```js
+// 好的写法
+var object = {
+
+    key1: value1,
+    key2: value2,
+
+    func: function() {
+        // 函数操作
+    },
+
+    key3: value3
+}
+
+// 不好的写法：不恰当的缩进
+var object = {
+                key1: value1,
+                key2: value2
+            }
+
+// 不好的写法：函数体周围缺少空行
+var object = {
+
+    key1: value1,
+    key2: value2,
+    func: function() {
+        // 函数操作
+    },
+    key3: value3
+}
+
+```
+当对象字面量作为函数参数时，如果值是变量，起始花括号应当同函数名在同一行。所有其余
+先前规则同样适用。
+```js
+// 好的写法
+doSomething({
+    key1: value1,
+    key2: value2
+})
+
+// 不好的写法：所有代码在同一行
+doSomething({ key1: value1,key2: value2 })
+```
+
+#### 数组直接量
+和对象直接量类似，数组直接量是JavaScript中定义数组最简洁的一种方式。不赞成显式
+地使用`Array`构造函数来创建数组，比如：
+```js
+// 不好的写法
+var colors = new Array("red", "green", "blue");
+var numbers = new Array(1, 2, 3, 4, 5);
+```
+可以使用二个方括号将数组初始元素括起来，来替代使用Array构造函数的方式来创建数组。
+```js
+// 好的做法
+var colors = [ "red", "green", "blue" ];
+var numbers = [ 1, 2, 3, 4, 5 ];
+```
 
