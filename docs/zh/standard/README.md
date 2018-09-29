@@ -19,7 +19,7 @@ if (true) {
 
 ### 语句结尾
 推荐总是使用分号
-```js {2,4,7,9}
+```js
 //	合法代码
 var name = "Nicholas";
 function sayName() {
@@ -54,6 +54,7 @@ doSomething(argument1, argument2, argument3, argument4
 * 在方法内的逻辑片段之间插入空行，提高可读性
 
 ### 命名
+变量和函数在命名时应当小心。命名仅限于数字字母字符，某些情况下也可以使用下划线。最好不要在任何命名中使用美元（$）或者反斜杠（\）。
 遵照驼峰式大小写命名法。驼峰式大小写命名法是由小写字母开始，后续每个单词首字母都大写。
 ```js
 var thisIsMyName;
@@ -102,13 +103,41 @@ if (getName() === "badfl") {
     doSomething();
 }
 ```
+构造函数：通过new运算符穿件新对象的函数。应当以驼峰格式命名并且首字符大写。构造函数名称应当以非动词开头，因为new代表着创建一个对象实例的操作。
+```js
+// 好的写法
+function MyObject() {
+    // 代码
+}
 
+// 不好的写法：小写字母开头
+function myObject() {
+    // 代码
+}
+
+// 不好的写法：使用下划线
+function My_Object() {
+    // 代码
+}
+
+// 不好的写法：动词开头
+function getMyObject() {
+    // 代码
+}
+```
 #### 常量
 区分普通的变量和常量，常量使用大写字母和下划线来命名，下划线用以分割单词。
 ```js
+// 好的写法
 var MAX_COUNT = 10;
+var TOTAL_COUNT = 10;
 var URL = "http://www.badfl.com";
 
+// 不好的写法：驼峰形式
+var totalCount = 10;
+
+// 不好的写法：混合形式
+var total_COUNT = 10;
 ```
 ### 运算符间距
 二元运算符（&&和||）前后必须使用一个空格来保持表达式的整洁。操作符包括赋值运算符
@@ -480,20 +509,102 @@ var result = something + somethingEles; /*somethingElse 不应当取值为null*/
 
 ## 语句和表达式
 
-### 花括号的对齐方式
+### 简单语句
+每一行最多只包含一条语句。所有简单的语句都应该以分好（`;`）结束。
+```js
+// 好的写法
+count++;
+a = b;
 
-### 块状句间隔
+// 不好的写法：多个表达式写在一行
+count++; a = b;
+```
 
-### switch语句
-#### 缩进
-#### case语句的“连续执行”
-#### default
+### 返回语句
+返回语句当返回一个值的时候不应当使用圆括号包裹，除非在某些情况下这么做可以让返回值更容易理解。
+```js
+return;
+return collection.size();
+return (size > 0 ? size : defaultSize);
+```
 
-### with语句
+### 复合语句
+复合语句是大括号括起来的语句列表。
+* 括起来的语句应当较复合语句多缩进一个层级。
+* 开始的大括号应当在复合语句所在行的末尾；结束的大括号应当独占一行且同复合语句的开始保持同样的缩进。
+* 当语句是控制结构的一部分时，诸如`if`或者`for`语句，所有语句都需要用大括号括起来，也包括单个语句。这个约定使得我们更方便地添加语句而不用担心忘记加括号而引起bug。
+* 想`if`一样的语句开始的关键词，其后应该紧跟一个空格，起始大括号应当在空格之后。
 
-### for循环
+#### if 语句
+`if`语句应当是下面的格式
+```js
+if (condition) {
+    statements
+}
 
-### for-in循环
+if (condition) {
+    statements
+} else {
+    statements
+}
+
+if (condition) {
+    statements
+} else if {
+    statements
+} else {
+    statements
+}
+```
+绝不允许在`if`语句中省略花括号。
+```js
+// 好的写法
+if (condition) {
+    doSomething();
+}
+
+// 不好的写法：不恰当的空格
+if(condition){
+    doSomething();
+}
+
+// 不好的写法：遗漏花括号
+if (condition)
+    doSomething();
+
+// 不好的写法：所有代码写在一行
+if (condition) { doSomething(); }
+
+// 不好的写法：所有代码写在一行且没有花括号
+if (condition) doSomething();
+```
+
+#### for 语句
+
+#### while 语句
+
+#### do 语句
+
+#### switch 语句
+
+#### try 语句
+`try`类的语句应当格式如下。
+```js
+try {
+    statements
+} catch (variable) {
+    statements
+}
+
+try {
+    statements
+} catch (variable) {
+    statements
+} finally {
+    statements
+}
+```
+
 
 ## 变量、函数和运算符
 
@@ -537,16 +648,189 @@ var found = false,
 ```
 
 ### 函数声明
+函数应当在使用前提前定义。一个不是作为方法的函数（也就是说没有作为一个对象的属性）应当使用函数定义的格式（不是函数表达式和`Function`构造器格式）。
+* 函数名和开始圆括号之间不应当有空格。
+* 结束的圆括号和右边的花括号之间应该保留一个空格
+* 右侧的花括号应当同`function`关键字保持同一行。
+* 开始和结束括号之间不应该有空格。
+* 参数名之间应当在逗号后保留一个空格。
+* 函数体应当保持一级缩进。
 
-### 函数调用间隔
+```js
 
-### 立即调用的函数
+// 好的写法
+function doSomething(arg1, arg2) {
+    return arg1 + arg2;
+}
+
+// 不好的写法：第一行不恰当的空格
+function doSomething (arg1, arg2){
+    return arg1 + arg2;
+}
+
+// 不好的写法：函数表达式
+var doSomething = function(arg1, arg2) {
+    return arg1 + arg2;
+};
+
+// 不好的写法：左侧的花括号位置不对
+function doSomething(arg1, arg2)
+{
+    return arg1 + arg2;
+}
+
+// 错误的写法：使用了Function构造器
+var doSomething = new Function("arg1", "arg2", "return arg1 + arg2");
+```
+其他函数内部定义的函数应当在var语句后立即定义。
+```js
+// 好的写法
+function outer() {
+
+    var count = 10,
+        name  = "badfl",
+        found = false,
+        empty;
+
+    function inner() {
+        // 代码
+    }
+
+    // 调用 inner() 的代码
+}
+
+// 不好的写法：inner函数的定义先于变量
+function outer() {
+
+    function inner() {
+        // 代码
+    }
+
+    var count = 10,
+        name  = "badfl",
+        found = false,
+        empty;
+
+    // 调用 inner() 的代码
+}
+```
+
+匿名函数可能作为方法赋值给对象，或者作为其他函数的参数。function关键字同开始括号之间不应有空格。
+```js
+// 好的写法
+object.method = function() {
+    // 代码
+}
+
+// 不好写法：不正确的空格
+object.method = function () {
+    // 代码
+}
+```
+
+函数声明不应当出现在语句块之内。比如，这段代码就不会按照我们的意图来执行（在不同的浏览器运行效果不相同，不管condition的计算结果如果，大多数浏览器会执行第二个声明）。
+```js
+// 不好的写法
+if (condition) {
+    function doSomething() {
+      alert("Hi!");
+    }
+
+    doSomething();
+} else {
+    function doSomething() {
+      alert("Yo!");
+    }
+
+    doSomething();
+}
+```
+
+#### 函数调用间隔
+函数调用时，在函数名和左括号之间没有空格。这样做是为了将它与块语句区分开来
+```js
+// 好的写法
+doSomething(item);
+
+// 不好的写法：看起来像一个块语句
+doSomething (item);
+
+// 用来做比对的块语句
+while (item) {
+    // 代码逻辑
+}
+```
+
+#### 立即调用的函数
+立即被调用的函数应当在函数调用的外层使用圆括号包裹。
+```js
+// 好的写法
+var value = (function() {
+
+    // 函数体
+
+    return {
+        message: "badfl"
+    }
+}());
+
+// 不好的写法：函数调用外层没有用圆括号包裹
+var value = function() {
+
+    // 函数体
+
+    return {
+        message: "badfl"
+    }
+}();
+
+// 不好的写法：圆括号位置不当
+var value = (function() {
+
+    // 函数体
+
+    return {
+        message: "badfl"
+    }
+})();
+
+```
 
 ### 严格模式
 
-### 相等
+### 赋值
+当变量赋值时，如果右侧是含有比较语句的表达式，需要用圆括号包裹。
+```js
+// 好的写法
+var flag = (1 < count);
 
+// 不好的写法：遗漏圆括号
+var flag = 1 < count;
+```
+
+### 相等
+使用`===`（严格相等）和`!==`（严格不相等）代替`==`（相等）和`!=`（不等）来避免弱类型转换错误。
+```js
+// 好的写法
+var same = (a === b);
+
+// 不好的写法：使用==
+var same = (a == b);
+```
+
+### 三元操作符
+三元操作符应当仅仅用在条件赋值语句中，而不要作为if语句的替代品。
+```js
+// 好的写法
+var value = condition ? value1 : value2;
+
+// 不好的写法：没有赋值，应当使用if表达式
+condition ? doSomething() : doSomethingElse();
+```
 ### eval()
+
+
+## 留白
 
 
 
