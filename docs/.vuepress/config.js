@@ -105,6 +105,15 @@ module.exports = {
                     link:'https://ssr.vuejs.org/zh/'
                   }
                 ]
+              },
+              {
+                text:'帮助',
+                items:[
+                  {
+                    text:'论坛',
+                    link:'https://forum.vuejs.org/'
+                  }
+                ]
               }
             ]
           },
