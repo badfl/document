@@ -9,6 +9,25 @@ Nicholas C. Zakas 《编写可维护的JavaScript》
 
 ## 基本的格式化
 
+### 留白
+在逻辑相关的代码块之间添加空行可以提高代码的可读性。
+
+两行空行仅限在如下情况中使用：
+* 在不同的源代码文件之间。
+* 在类和接口定义之间。
+
+单行空行仅限在如下情况中使用：
+* 方法之间
+* 方法中局部变量和第一行语句之间。
+* 多行或者单行注释之前。
+* 方法中逻辑代码块之间以提升代码的可读性。
+
+空格应当在如下情况中使用：
+* 关键词后跟括号的情况应当使用空格隔开。
+* 参数列表中逗号后应当保留一个空格。
+* 所有的除了点（`.`）之外的二元运算符，其操作数都应当用空格隔开。单目运算符的操作数之间不应该用空白隔开，如一元减号、递增（`++`）、递减（`--`）。
+* `for`语句中的表达式之间应当用空格隔开。
+
 ### 缩进层级
 每一行的层级由**4个空格**组成，避免使用制表符（Tab）进行缩进
 ```js
@@ -580,12 +599,137 @@ if (condition) doSomething();
 ```
 
 #### for 语句
+`for`类型的语句应当是下面的格式。
+```js
+for (initialization; condition; update) {
+    statements
+}
+
+for (variable in object) {
+    statements
+}
+```
+`for`语句的初始化部分不应当有变量声明。
+```js
+// 好的写法
+var i,
+    len;
+for (i=0, len=10; i < len; i++) {
+    // 代码
+}
+
+// 不好的写法：初始化时候声明变量
+for (var i=0, len=10; i < len; i++) {
+    // 代码
+}
+
+// 不好的写法：初始化时候声明变量
+for (var prop in object) {
+    // 代码
+}
+```
+for-in循环是用来对实例对象和原型链中的键（key）做遍历的，而不是用来遍历包含数字索引的数组。
+```js
+// 好的写法
+var prop;
+
+for (prop in object) {
+    console.log("Property name is "+ prop);
+    console.log("Property value is " + object[prop]);
+}
+
+// 不好的用法
+var values = [ 1, 2, 3, 4, 5, 6, 7],
+    i;
+
+for (i in values) {
+    process(items[i]);
+}
+```
+当使用for-in语句时，使用hasOwnProperty()进行双重检查来过滤出对象的成员。
+```js
+// 好的写法
+var prop;
+
+for (prop in object) {
+    if (object.hasOwnProperty(prop)) {
+        console.log("Property name is "+ prop);
+        console.log("Property value is " + object[prop]);
+    }
+}
+
+// 好的写法：包含原型链遍历应当补充注释
+var prop;
+
+for (prop in object) { // 包含原型链的遍历
+    console.log("Property name is "+ prop);
+    console.log("Property value is " + object[prop]);
+}
+```
 
 #### while 语句
+`while`类的语句应当是下面的格式。
+```js
+while (condition) {
+    statements
+}
+```
 
 #### do 语句
+`do`类的语句应当是下面的格式。
+```js
+do {
+    statements
+} while (condition);
+```
 
 #### switch 语句
+`switch`类的语句应当是如下格式。
+```js
+switch (expression) {
+    case expression:
+        statements
+
+    default:
+        statements
+}
+```
+`switch`下的每个`case`都应该保持一个缩进。除第一个之外包括`default`在内每一个`case`都应当在之前保持一个空行。
+每一组语句（除了default）都应当以`break`、`return`、`throw`结尾，或者用一行注释表示跳过。
+```js
+// 好的写法
+switch (value) {
+    case 1:
+        /* 跳过 */
+
+    case 2:
+        doSomething();
+        break;
+
+    case 3:
+        return true;
+
+    default:
+        throw new Error("This shouldn't happen.");
+}
+```
+如果一个`switch`语句不包含default情况，应当用一行注释代替。
+```js
+// 好的写法
+switch (value) {
+    case 1:
+        /* 跳过 */
+
+    case 2:
+        doSomething();
+        break;
+
+    case 3:
+        return true;
+
+    // 没有default
+}
+```
 
 #### try 语句
 `try`类的语句应当格式如下。
@@ -830,7 +974,8 @@ condition ? doSomething() : doSomethingElse();
 ### eval()
 
 
-## 留白
+
+
 
 
 

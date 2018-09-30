@@ -21,7 +21,7 @@ module.exports = {
   serviceWorker: true,
   theme: 'vue',
   themeConfig: {
-    repo: 'https://github.com/badfl/document/tree/develop',
+    repo: 'https://github.com/badfl/document',
     docsBranch:'develop',
     editLinks: true,
     displayAllHeaders: true,
