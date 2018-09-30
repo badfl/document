@@ -29,7 +29,7 @@ Nicholas C. Zakas 《编写可维护的JavaScript》
 * `for`语句中的表达式之间应当用空格隔开。
 
 ### 缩进层级
-每一行的层级由**4个空格**组成，避免使用制表符（Tab）进行缩进
+每一行的层级由**4个空格**组成，避免使用制表符（Tab）进行缩进。
 ```js
 if (true) {
     doSomething();
@@ -37,7 +37,7 @@ if (true) {
 ```
 
 ### 语句结尾
-推荐总是使用分号
+推荐总是使用分号。
 ```js
 //	合法代码
 var name = "Nicholas";
@@ -74,7 +74,7 @@ doSomething(argument1, argument2, argument3, argument4
 
 ### 命名
 变量和函数在命名时应当小心。命名仅限于数字字母字符，某些情况下也可以使用下划线。最好不要在任何命名中使用美元（$）或者反斜杠（\）。
-遵照驼峰式大小写命名法。驼峰式大小写命名法是由小写字母开始，后续每个单词首字母都大写。
+遵照驼峰式大小写命名法。**驼峰式大小写命名法**是由小写字母开始，后续每个单词首字母都大写。
 ```js
 var thisIsMyName;
 var anotherVariable;
@@ -82,7 +82,7 @@ var aVeryLongVariableName;
 ```
 
 #### 变量和函数
-变量名应当总是遵循驼峰大小写命名法，并且变量命名前缀应当是名词，函数名前应当是动词。
+变量名应当总是遵循驼峰大小写命名法，并且变量命名前缀应当是**名词**，函数名前应当是**动词**。
 这样可以将变量与函数区分开来。
 ```js
 // 好的写法
@@ -114,6 +114,7 @@ function theName() {
 | get           | 函数返回一个非布尔值     |
 | set           | 函数用来保存一个值       |
 ```js
+// 好的命名
 if (isEnabled()) {
     setName("badfl");
 }
@@ -122,7 +123,7 @@ if (getName() === "badfl") {
     doSomething();
 }
 ```
-构造函数：通过new运算符穿件新对象的函数。应当以驼峰格式命名并且首字符大写。构造函数名称应当以非动词开头，因为new代表着创建一个对象实例的操作。
+构造函数：通过`new`运算符穿件新对象的函数。应当以驼峰格式命名并且首字符大写。构造函数名称应当以非动词开头，因为`new`代表着创建一个对象实例的操作。
 ```js
 // 好的写法
 function MyObject() {
@@ -145,7 +146,7 @@ function getMyObject() {
 }
 ```
 #### 常量
-区分普通的变量和常量，常量使用大写字母和下划线来命名，下划线用以分割单词。
+区分普通的变量和常量，常量使用**大写字母**和**下划线**来命名，下划线用以分割单词。
 ```js
 // 好的写法
 var MAX_COUNT = 10;
@@ -159,8 +160,7 @@ var totalCount = 10;
 var total_COUNT = 10;
 ```
 ### 运算符间距
-二元运算符（&&和||）前后必须使用一个空格来保持表达式的整洁。操作符包括赋值运算符
-和逻辑运算符。
+二元运算符（`&&`和`||`）前后必须使用一个空格来保持表达式的整洁。操作符包括赋值运算符和逻辑运算符。
 ```js
 // 好的写法
 var found = (values[i] === item);
@@ -190,7 +190,7 @@ for (i=0; i<count; i++) {
 ```
 
 ### 括号间距
-当使用括号时，紧接左括号之后和紧接有括号之前不应该有空格。
+当使用括号时，紧接左括号之后和紧接右括号之前不应该有空格。
 ```js
 // 好的写法
 var found = (values[i] === item);
@@ -221,12 +221,12 @@ for (i = 0; i < count; i++) {
 
 
 ### 直接量
-JavaScript中包含了一些类型的原始值：`String`、`Number`、`Boolean`、`null`、`undefinded`。
+JavaScript中包含了一些类型的原始值：`String`、`Number`、`Boolean`、`null`、`undefined`。
 同样也包含对象直接量和数组直接量。这其中，只有布尔值是自解释的，其他的类型或多或少
 都需要思考一下它们如何才能精确地表示出来。
 
 #### 字符串
-字符串应当始终使用双引号（避免使用单引号）且保持一行。避免在字符串中使用斜线另起一行。
+字符串应当始终使用**双引号**（避免使用单引号）且保持一行。避免在字符串中使用斜线另起一行。
 ```js
 //好的写法
 var name = "Badfl";
@@ -301,7 +301,7 @@ if (person != null) {
 }
 
 // 不好的写法：检测是否传入了参数
-function doSomething(arg1,arg2,arg3,arg4) {
+function doSomething(arg1, arg2, arg3, arg4) {
     if (arg4 != null) {
         doSomethingElse();
     }
@@ -315,12 +315,12 @@ function doSomething(arg1,arg2,arg3,arg4) {
 操作符。
 ```js
 // 好的写法
-if (typeof variable == "undefinded") {
+if (typeof variable == "undefined") {
     // do something
 }
 
 // 不好的写法：使用undefined直接量
-if (variable == undefinded) {
+if (variable == undefined) {
     //do something
 }
 ```
@@ -331,13 +331,13 @@ if (variable == undefinded) {
 // 好的写法
 var book = {
 
-    title: "badfltitle",
+    title: "badfl title",
     author: "badfl"
 };
 
 // 不好的写法
 var book = new Object();
-book.title = "badfltitle";
+book.title = "badfl title";
 book.author = "badfl";
 
 ```
@@ -403,7 +403,7 @@ doSomething({ key1: value1,key2: value2 })
 var colors = new Array("red", "green", "blue");
 var numbers = new Array(1, 2, 3, 4, 5);
 ```
-可以使用二个方括号将数组初始元素括起来，来替代使用Array构造函数的方式来创建数组。
+可以使用二个方括号将数组初始元素括起来，来替代使用`Array`构造函数的方式来创建数组。
 ```js
 // 好的做法
 var colors = [ "red", "green", "blue" ];
@@ -419,9 +419,10 @@ var numbers = [ 1, 2, 3, 4, 5 ];
 
 #### 单行注释
 单行注释应当用来说明一行代码或者一组相关的代码。单行注释应保持以下风格：
-* 双斜线后敲入一个空格，且缩进与层级与下一行代码保持一致。
+* 双斜线后敲入一个**空格**，且缩进与层级与下一行代码保持一致。
 * 注释之前总有一个空行。
 * 在代码行尾部的注释。代码结束到注释之间至少有一个缩进。
+
 单行注释可能有三种使用方式：
 * 独占一行的注释，用来结束下一行代码。
 * 在代码行的尾部的注释，用来解释它之前的代码。
@@ -548,15 +549,16 @@ return (size > 0 ? size : defaultSize);
 ```
 
 ### 复合语句
-复合语句是大括号括起来的语句列表。
+复合语句是大括号括起来的语句列表。复合语句应该保持以下风格：
 * 括起来的语句应当较复合语句多缩进一个层级。
 * 开始的大括号应当在复合语句所在行的末尾；结束的大括号应当独占一行且同复合语句的开始保持同样的缩进。
 * 当语句是控制结构的一部分时，诸如`if`或者`for`语句，所有语句都需要用大括号括起来，也包括单个语句。这个约定使得我们更方便地添加语句而不用担心忘记加括号而引起bug。
-* 想`if`一样的语句开始的关键词，其后应该紧跟一个空格，起始大括号应当在空格之后。
+* 像`if`一样的语句开始的关键词，其后应该紧跟一个空格，起始大括号应当在空格之后。
 
 #### if 语句
 `if`语句应当是下面的格式
 ```js
+// if语句格式
 if (condition) {
     statements
 }
@@ -601,6 +603,7 @@ if (condition) doSomething();
 #### for 语句
 `for`类型的语句应当是下面的格式。
 ```js
+// for语句格式
 for (initialization; condition; update) {
     statements
 }
@@ -614,6 +617,7 @@ for (variable in object) {
 // 好的写法
 var i,
     len;
+
 for (i=0, len=10; i < len; i++) {
     // 代码
 }
@@ -628,7 +632,7 @@ for (var prop in object) {
     // 代码
 }
 ```
-for-in循环是用来对实例对象和原型链中的键（key）做遍历的，而不是用来遍历包含数字索引的数组。
+`for-in`循环是用来对实例对象和原型链中的键（key）做遍历的，而不是用来遍历包含数字索引的数组。
 ```js
 // 好的写法
 var prop;
@@ -646,7 +650,7 @@ for (i in values) {
     process(items[i]);
 }
 ```
-当使用for-in语句时，使用hasOwnProperty()进行双重检查来过滤出对象的成员。
+当使用`for-in`语句时，使用`hasOwnProperty()`进行双重检查来过滤出对象的成员。
 ```js
 // 好的写法
 var prop;
@@ -695,7 +699,7 @@ switch (expression) {
 }
 ```
 `switch`下的每个`case`都应该保持一个缩进。除第一个之外包括`default`在内每一个`case`都应当在之前保持一个空行。
-每一组语句（除了default）都应当以`break`、`return`、`throw`结尾，或者用一行注释表示跳过。
+每一组语句（除了`default`）都应当以`break`、`return`、`throw`结尾，或者用一行注释表示跳过。
 ```js
 // 好的写法
 switch (value) {
@@ -753,8 +757,8 @@ try {
 ## 变量、函数和运算符
 
 ### 变量声明
-所有的变量在使用前都应当事先定义，变量定义应当放在函数开头，使用一个var表达式，每行一个变量。除了首行都应当多一层缩进以使变量名能够垂直方式对齐。
-变量定义时应当初始化，并且赋值操作符应当保持一致的缩进。初始化的变量应当在未初始化变量之前。
+所有的变量在使用前都应当事先定义，变量定义应当放在函数开头，使用一个`var`表达式，每行一个变量。除了首行都应当多一层缩进以使变量名能够垂直方式对齐。
+变量定义时应当初始化，并且赋值操作符应当保持一致的缩进。**初始化的变量应当在未初始化变量之前**。
 ```js
 // 好的写法
 var count = 10,
@@ -796,7 +800,7 @@ var found = false,
 * 函数名和开始圆括号之间不应当有空格。
 * 结束的圆括号和右边的花括号之间应该保留一个空格
 * 右侧的花括号应当同`function`关键字保持同一行。
-* 开始和结束括号之间不应该有空格。
+* 开始和结束圆括号之间不应该有空格。
 * 参数名之间应当在逗号后保留一个空格。
 * 函数体应当保持一级缩进。
 
@@ -826,7 +830,7 @@ function doSomething(arg1, arg2)
 // 错误的写法：使用了Function构造器
 var doSomething = new Function("arg1", "arg2", "return arg1 + arg2");
 ```
-其他函数内部定义的函数应当在var语句后立即定义。
+其他函数内部定义的函数应当在`var`语句后立即定义。
 ```js
 // 好的写法
 function outer() {
@@ -859,7 +863,7 @@ function outer() {
 }
 ```
 
-匿名函数可能作为方法赋值给对象，或者作为其他函数的参数。function关键字同开始括号之间不应有空格。
+匿名函数可能作为方法赋值给对象，或者作为其他函数的参数。`function`关键字同开始括号之间不应有空格。
 ```js
 // 好的写法
 object.method = function() {
@@ -872,7 +876,7 @@ object.method = function () {
 }
 ```
 
-函数声明不应当出现在语句块之内。比如，这段代码就不会按照我们的意图来执行（在不同的浏览器运行效果不相同，不管condition的计算结果如果，大多数浏览器会执行第二个声明）。
+函数声明不应当出现在语句块之内。比如，这段代码就不会按照我们的意图来执行（在不同的浏览器运行效果不相同，不管condition的计算结果如何，大多数浏览器会执行第二个声明）。
 ```js
 // 不好的写法
 if (condition) {
@@ -940,8 +944,6 @@ var value = (function() {
 
 ```
 
-### 严格模式
-
 ### 赋值
 当变量赋值时，如果右侧是含有比较语句的表达式，需要用圆括号包裹。
 ```js
@@ -963,7 +965,7 @@ var same = (a == b);
 ```
 
 ### 三元操作符
-三元操作符应当仅仅用在条件赋值语句中，而不要作为if语句的替代品。
+三元操作符应当仅仅用在条件赋值语句中，而不要作为`if`语句的替代品。
 ```js
 // 好的写法
 var value = condition ? value1 : value2;
@@ -972,6 +974,7 @@ var value = condition ? value1 : value2;
 condition ? doSomething() : doSomethingElse();
 ```
 ### eval()
+避免使用`eval()`,涉及到回调中解析JSON的情形可以使用。
 
 
 
