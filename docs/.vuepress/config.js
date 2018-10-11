@@ -28,8 +28,8 @@ module.exports = {
     docsDir: 'docs',
     // #697 Provided by the official algolia team.
     algolia: {
-      apiKey: '3a539aab83105f01761a137c61004d85',
-      indexName: 'vuepress'
+      apiKey: '09e4ab218175ac349007c1d23e75c89c',
+      indexName: 'badfl'
     },
     locales: {
       '/': {
