@@ -175,7 +175,8 @@ module.exports = {
               'mui-btn',
               'mui-card',
               'mui-dialog',
-              'mui-input'
+              'mui-input',
+              'mui-radio'
             ]
            }
           ],
