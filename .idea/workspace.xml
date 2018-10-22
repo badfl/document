@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e88c0637-f8c6-4a58-87bd-7587e8360938" name="默认的" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/docs/zh/mui/mui-radio.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/docs/zh/mui/badges.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/docs/zh/mui/mui-checkbox.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/docs/zh/mui/numbox.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/docs/zh/mui/range.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/docs/zh/mui/switch.md" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" />
     </list>
@@ -17,13 +21,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="mui-radio.md" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="mui-radio.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/zh/mui/mui-radio.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="2047">
-                <caret line="177" column="3" lean-forward="true" selection-start-line="177" selection-start-column="3" selection-end-line="177" selection-end-column="3" />
+              <first_editor relative-caret-position="3363">
+                <caret line="177" column="3" lean-forward="false" selection-start-line="177" selection-start-column="3" selection-end-line="177" selection-end-column="3" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -36,9 +40,54 @@
       <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/.vuepress/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="178" column="24" lean-forward="false" selection-start-line="178" selection-start-column="24" selection-end-line="178" selection-end-column="24" />
+            <state relative-caret-position="456">
+              <caret line="183" column="21" lean-forward="false" selection-start-line="183" selection-start-column="21" selection-end-line="183" selection-end-column="21" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="numbox.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/zh/mui/numbox.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="3287">
+                <caret line="173" column="3" lean-forward="false" selection-start-line="173" selection-start-column="3" selection-end-line="173" selection-end-column="3" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="range.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/zh/mui/range.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="470">
+                <caret line="163" column="3" lean-forward="false" selection-start-line="163" selection-start-column="3" selection-end-line="163" selection-end-column="3" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="badges.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/zh/mui/badges.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="1" lean-forward="true" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
             </state>
           </provider>
         </entry>
@@ -93,8 +142,13 @@
         <option value="$PROJECT_DIR$/docs/zh/standard/index.js" />
         <option value="$PROJECT_DIR$/docs/zh/standard/index.html" />
         <option value="$PROJECT_DIR$/docs/zh/standard/README.md" />
-        <option value="$PROJECT_DIR$/docs/.vuepress/config.js" />
         <option value="$PROJECT_DIR$/docs/zh/mui/mui-radio.md" />
+        <option value="$PROJECT_DIR$/docs/zh/mui/mui-checkbox.md" />
+        <option value="$PROJECT_DIR$/docs/zh/mui/range.md" />
+        <option value="$PROJECT_DIR$/docs/zh/mui/switch.md" />
+        <option value="$PROJECT_DIR$/docs/zh/mui/numbox.md" />
+        <option value="$PROJECT_DIR$/docs/.vuepress/config.js" />
+        <option value="$PROJECT_DIR$/docs/zh/mui/badges.md" />
       </list>
     </option>
   </component>
@@ -144,8 +198,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,6 +233,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -262,11 +316,12 @@
       <workItem from="1539672035186" duration="4430000" />
       <workItem from="1539847507893" duration="713000" />
       <workItem from="1539930732868" duration="5113000" />
+      <workItem from="1540172955555" duration="4720000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103255000" />
+    <option name="totallyTimeSpent" value="107975000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -286,8 +341,8 @@
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962743" sideWeight="0.5019084" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24591948" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -317,22 +372,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/zh/guide/assets.md" />
-    <entry file="file://$PROJECT_DIR$/docs/zh/guide/markdown.md" />
-    <entry file="file://$PROJECT_DIR$/docs/zh/guide/README.md" />
-    <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/docs/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yarn.lock" />
     <entry file="file://$PROJECT_DIR$/docs/zh/vue/v2/style-guide/README.md" />
     <entry file="file://$PROJECT_DIR$/docs/zh/vue/v2/search/index.md" />
@@ -504,6 +543,44 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/zh/mui/mui-radio.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="3363">
+            <caret line="177" column="3" lean-forward="false" selection-start-line="177" selection-start-column="3" selection-end-line="177" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/zh/mui/mui-checkbox.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="570">
+            <caret line="30" column="6" lean-forward="false" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/zh/mui/switch.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="323">
+            <caret line="290" column="27" lean-forward="false" selection-start-line="290" selection-start-column="27" selection-end-line="290" selection-end-column="27" />
             <folding />
           </first_editor>
           <second_editor>
@@ -514,17 +591,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/.vuepress/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="178" column="24" lean-forward="false" selection-start-line="178" selection-start-column="24" selection-end-line="178" selection-end-column="24" />
+        <state relative-caret-position="456">
+          <caret line="183" column="21" lean-forward="false" selection-start-line="183" selection-start-column="21" selection-end-line="183" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/zh/mui/mui-radio.md">
+    <entry file="file://$PROJECT_DIR$/docs/zh/mui/numbox.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="2047">
-            <caret line="177" column="3" lean-forward="true" selection-start-line="177" selection-start-column="3" selection-end-line="177" selection-end-column="3" />
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="3287">
+            <caret line="173" column="3" lean-forward="false" selection-start-line="173" selection-start-column="3" selection-end-line="173" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/zh/mui/range.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="470">
+            <caret line="163" column="3" lean-forward="false" selection-start-line="163" selection-start-column="3" selection-end-line="163" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/zh/mui/badges.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="1" lean-forward="true" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
             <folding />
           </first_editor>
           <second_editor>

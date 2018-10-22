@@ -128,7 +128,7 @@ module.exports = {
                 text: 'FQA',
                 items: [
                   {
-                    text:'自己整理',
+                    text:'非官方mui文档',
                     link:'/zh/mui/'
                   }
                 ]
@@ -176,7 +176,12 @@ module.exports = {
               'mui-card',
               'mui-dialog',
               'mui-input',
-              'mui-radio'
+              'mui-radio',
+              'mui-checkbox',
+              'range',
+              'switch',
+              'numbox',
+              'badges'
             ]
            }
           ],
