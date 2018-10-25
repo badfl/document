@@ -150,12 +150,30 @@ module.exports = {
                 text: '社区',
                 items: [
                   {
-                    text: '问答社区',
+                    text: 'Dcloud问答社区',
                     link: 'http://ask.dcloud.net.cn/explore/'
                   },
                   {
                     text: 'Dcloud官网',
                     link: 'http://www.dcloud.io/'
+                  }
+
+                ]
+              },
+              {
+                text: '官方资源',
+                items: [
+                  {
+                    text: 'HTML 5+ SDK',
+                    link: 'http://ask.dcloud.net.cn/article/103'
+                  },
+                  {
+                    text: '安卓离线打包',
+                    link: 'https://ask.dcloud.net.cn/article/38'
+                  },
+                  {
+                    text: 'IOS离线打包',
+                    link: 'https://ask.dcloud.net.cn/article/41'
                   }
 
                 ]
@@ -181,7 +199,19 @@ module.exports = {
               'range',
               'switch',
               'numbox',
-              'badges'
+              'badges',
+              'slide',
+              'progressbar',
+              'grid',
+              'icon',
+              'mask',
+              'picker',
+              'nav',
+              'scroll',
+              'menu',
+              'tabbar',
+              'word',
+              'others'
             ]
            }
           ],
