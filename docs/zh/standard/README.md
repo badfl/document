@@ -14,6 +14,8 @@ sidebarDepth: 4
 
 * [JSLint](http://www.jslint.com/help.html)
 
+* [ESLint](https://eslint.org/)
+
 ## 源文件基础
 
 ### 命名
@@ -243,17 +245,17 @@ JavaScript中包含了一些类型的原始值：`String`、`Number`、`Boolean`
 都需要思考一下它们如何才能精确地表示出来。
 
 #### 字符串
-字符串应当始终使用**双引号**（避免使用单引号）且保持一行。避免在字符串中使用斜线另起一行。
+字符串应当始终使用**单引号**（避免使用双引号）且保持一行。避免在字符串中使用斜线另起一行。
 ```js
 // 好的写法
-var name = "Badfl";
-
-// 不好的写法：单引号
 var name = 'Badfl';
 
+// 不好的写法：单引号
+var name = "Badfl";
+
 // 不好的写法：字符串结束之前换行
-var longString = "这是一个很长的故事，很长很长的故事 \
-换行以后的文字";
+var longString = '这是一个很长的故事，很长很长的故事 \
+换行以后的文字';
 
 ```
 
