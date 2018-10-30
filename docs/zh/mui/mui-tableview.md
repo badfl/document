@@ -14,7 +14,7 @@
 </ul>
 ```
 
-自定义列表高亮颜色
+**自定义列表高亮颜色**
 点击列表，对应列表项显示灰色高亮，若想自定义高亮颜色，只需要重写.mui-table-view-cell.mui-active即可，如下：
 
 ```css
@@ -24,7 +24,7 @@
 }
 ```
 
-右侧添加导航箭头
+**右侧添加导航箭头**
 若右侧需要增加导航箭头，变成导航链接，则只需在li节点下增加a子节点，并为该a节点增加.mui-navigate-right类即可，如下：
 
 ```html
@@ -41,25 +41,25 @@
 </ul>
 ```
 
-右侧添加数字角标等控件
+**右侧添加数字角标等控件**
 mui支持将数字角标、按钮、开关等控件放在列表中；mui默认将数字角标放在列表右侧显示，代码如下：
 
 ```html
 <ul class="mui-table-view">
-    <li class="mui-table-view-cell">Item 1 
+    <li class="mui-table-view-cell">Item 1
         <span class="mui-badge mui-badge-primary">11</span>
     </li>
-    <li class="mui-table-view-cell">Item 2 
+    <li class="mui-table-view-cell">Item 2
         <span class="mui-badge mui-badge-success">22</span>
     </li>
-    <li class="mui-table-view-cell">Item 3 
+    <li class="mui-table-view-cell">Item 3
         <span class="mui-badge">33</span>
     </li>
 </ul>
 ```
 
-media list（图文列表）
-图文列表继承自列表组件，主要添加了.mui-media、.mui-media-object、.mui-media-body、.mui-pull-left\/right几个类，如下为示例代码
+**media list（图文列表）**
+图文列表继承自列表组件，主要添加了`.mui-media`、`.mui-media-object`、`.mui-media-body`、`.mui-pull-left\/right`几个类，如下为示例代码
 [source code](https://jsfiddle.net/badfl/t4htb4re/)
 
 ```html
@@ -93,29 +93,30 @@ media list（图文列表）
     </li>
 </ul>
 ```
-
+**折叠面板**
 折叠面板从二级列表中演化而来，dom结构和二级列表类似
 [source code](https://jsfiddle.net/badfl/k4mfLnsx/)
 
 ```html
-<ul class="mui-table-view"> 
-        <li class="mui-table-view-cell mui-collapse">
-            <a class="mui-navigate-right" href="#">面板1</a>
-            <div class="mui-collapse-content">
-                <p>面板1子内容</p>
-            </div>
-        </li>
-    </ul>
+<ul class="mui-table-view">
+    <li class="mui-table-view-cell mui-collapse">
+        <a class="mui-navigate-right" href="#">面板1</a>
+        <div class="mui-collapse-content">
+            <p>面板1子内容</p>
+        </div>
+    </li>
+</ul>
 ```
 
-可以在折叠面板中放置任何内容；折叠面板默认收缩，若希望某个面板默认展开，只需要在包含.mui-collapse类的li节点上，增加.mui-active类即可；mui官网中的方法说明，使用的就是折叠面板控件。
+可以在折叠面板中放置任何内容；折叠面板默认收缩，若希望某个面板默认展开，只需要在包含`.mui-collapse`类的li节点上，增加`.mui-active`类即可；
+mui官网中的方法说明，使用的就是折叠面板控件。
 
 
 ## mui-table-view
 
 ---
 
-列表是常用的UI控件，mui封装的列表组件比较简单，只需要在ul节点上添加.mui-table-view类、在li节点上添加.mui-table-view-cell类即可，
+列表是常用的UI控件，mui封装的列表组件比较简单，只需要在ul节点上添加`.mui-table-view`类、在li节点上添加`.mui-table-view-cell`类即可，
 **如下为示例代码：**
 ```html
 <ul class="mui-table-view">
@@ -145,7 +146,8 @@ media list（图文列表）
 </div>
 ```
 
-可以在折叠面板中放置任何内容；折叠面板默认收缩，若希望某个面板默认展开，只需要在包含.mui-collapse类的li节点上，增加.mui-active类即可；mui官网中的方法说明，使用的就是折叠面板控件。
+可以在折叠面板中放置任何内容；折叠面板默认收缩，若希望某个面板默认展开，只需要在包含`.mui-collapse`类的li节点上，增加`.mui-active`类即
+可；mui官网中的方法说明，使用的就是折叠面板控件。
 
 ---
 
@@ -205,7 +207,7 @@ media list（图文列表）
 
 ## mui-table-view-cell
 
-mui-table-view子项，在li节点上添加.mui-table-view-cell类
+`mui-table-view`子项，在li节点上添加`.mui-table-view-cell`类
 ```html
 <ul class="mui-table-view">
 	<li class="mui-table-view-cell">Item 1</li>
@@ -223,7 +225,7 @@ mui-table-view子项，在li节点上添加.mui-table-view-cell类
     <li class="mui-table-view-cell mui-collapse">
       <a class="mui-navigate-right" href="#">Item 1</a>
       <div class="mui-collapse-content">
-      第1个面板中的内容
+          第1个面板中的内容
       </div>
     </li>
   </ul>
@@ -324,32 +326,29 @@ margin: -8px -16px;
 /*1956*/
 .mui-table-view-icon .mui-table-view-cell .mui-navigate-right .mui-icon
 {
-font-size: 20px;
+    font-size: 20px;
 
-margin-top: -1px;
-margin-right: 5px;
-margin-left: -5px;
+    margin-top: -1px;
+    margin-right: 5px;
+    margin-left: -5px;
 }
 /*1986*/
 .mui-table-view-radio .mui-table-view-cell .mui-navigate-right:after
 {
-font-size: 30px;
-font-weight: 600;
-
-right: 9px;
-
-content: '';
-
-color: #007aff;
+    font-size: 30px;
+    font-weight: 600;
+    right: 9px;
+    content: '';
+    color: #007aff;
 }
 .mui-table-view-radio .mui-table-view-cell.mui-selected .mui-navigate-right:after
 {
-content: '\e472';
+    content: '\e472';
 }
 /*2144*/
 .mui-table-view-cell > .mui-slider-handle.mui-navigate-right:after, .mui-table-view-cell > .mui-slider-handle .mui-navigate-right:after
 {
-right: 0;
+    right: 0;
 }
 /*2384*/
 .mui-table-view-cell .mui-navigate-right > .mui-btn,
@@ -371,48 +370,42 @@ right: 0;
 .mui-table-view-cell > a .mui-push-right > .mui-badge,
 .mui-table-view-cell > a .mui-push-right > .mui-switch
 {
-right: 35px;
+    right: 35px;
 }
 
 /*2419行*/
 .mui-table-view-cell.mui-collapse > .mui-navigate-right:after, .mui-table-view-cell.mui-collapse > .mui-push-right:after
 {
-content: '\e581';
+    content: '\e581';
 }
 /*2431行*/
 .mui-table-view-cell.mui-collapse.mui-active > .mui-navigate-right:after, .mui-table-view-cell.mui-collapse.mui-active > .mui-push-right:after
 {
-content: '\e580';
+    content: '\e580';
 }
 /*4567行*/
 .mui-navigate-right:after,
 .mui-push-left:after,
 .mui-push-right:after
 {
-font-family: Muiicons;
-font-size: inherit;
-line-height: 1;
-
-position: absolute;
-top: 50%;
-
-display: inline-block;
-
--webkit-transform: translateY(-50%);
-transform: translateY(-50%);
-text-decoration: none;
-
-color: #bbb;
-
--webkit-font-smoothing: antialiased;
+    font-family: Muiicons;
+    font-size: inherit;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-decoration: none;
+    color: #bbb;
+    -webkit-font-smoothing: antialiased;
 }
 /*4596行*/
 .mui-navigate-right:after,
 .mui-push-right:after
 {
-right: 15px;
-
-content: '\e583';
+    right: 15px;
+    content: '\e583';
 }
 
 ```
@@ -435,13 +428,10 @@ content: '\e583';
     right: 0;
     bottom: 0;
     left: 70px;
-
     height: 1px;
-
     content: '';
     -webkit-transform: scaleY(.5);
             transform: scaleY(.5);
-
     background-color: #c8c7cc;
 }
 /*2411*/
@@ -478,17 +468,13 @@ content: '\e583';
 .mui-table-view-cell.mui-collapse .mui-collapse-content
 {
     position: relative;
-
     display: none;
     overflow: hidden;
-
     margin: 11px -15px -11px;
     padding: 8px 15px;
-
     -webkit-transition: height .35s ease;
          -o-transition: height .35s ease;
             transition: height .35s ease;
-
     background: white;
 }
 .mui-table-view-cell.mui-collapse .mui-collapse-content > .mui-input-group, .mui-table-view-cell.mui-collapse .mui-collapse-content > .mui-slider
@@ -504,12 +490,10 @@ content: '\e583';
 .mui-table-view-cell.mui-collapse .mui-table-view
 {
     display: none;
-
     margin-top: 11px;
     margin-right: -15px;
     margin-bottom: -11px;
     margin-left: -15px;
-
     border: 0;
 }
 .mui-table-view-cell.mui-collapse .mui-table-view.mui-table-view-chevron
@@ -519,7 +503,6 @@ content: '\e583';
 .mui-table-view-cell.mui-collapse .mui-table-view .mui-table-view-cell
 {
     padding-left: 31px;
-
     background-position: 31px 100%;
 }
 .mui-table-view-cell.mui-collapse .mui-table-view .mui-table-view-cell:after
@@ -528,13 +511,10 @@ content: '\e583';
     right: 0;
     bottom: 0;
     left: 30px;
-
     height: 1px;
-
     content: '';
     -webkit-transform: scaleY(.5);
             transform: scaleY(.5);
-
     background-color: #c8c7cc;
 }
 ```
@@ -608,7 +588,6 @@ content: '\e583';
 .mui-table-view .mui-media-object
 {
     line-height: 42px;
-
     max-width: 42px;
     height: 42px;
 }
@@ -623,7 +602,6 @@ content: '\e583';
 .mui-table-view .mui-media-large .mui-media-object
 {
     line-height: 80px;
-
     max-width: 80px;
     height: 80px;
 }
@@ -631,7 +609,6 @@ content: '\e583';
 .mui-table-view .mui-media-object
 {
     line-height: 42px;
-
     max-width: 42px;
     height: 42px;
 }
@@ -654,7 +631,6 @@ content: '\e583';
 .mui-table-view .mui-table-view-cell.mui-media-icon .mui-media-object img
 {
     line-height: 29px;
-
     max-width: 29px;
     height: 29px;
 }
@@ -694,13 +670,10 @@ content: '\e583';
     right: 0;
     bottom: 0;
     left: 55px;
-
     height: 1px;
-
     content: '';
     -webkit-transform: scaleY(.5);
             transform: scaleY(.5);
-
     background-color: #c8c7cc;
 }
 /*2354*/
@@ -710,13 +683,10 @@ content: '\e583';
     right: 0;
     bottom: 0;
     left: 70px;
-
     height: 1px;
-
     content: '';
     -webkit-transform: scaleY(.5);
             transform: scaleY(.5);
-
     background-color: #c8c7cc;
 }
 /*2542*/
@@ -724,15 +694,11 @@ content: '\e583';
 {
     font-size: 15px;
     line-height: 15px;
-
     display: block;
-
     width: 100%;
     height: 15px;
     margin-top: 8px;
-
     text-overflow: ellipsis;
-
     color: #333;
 }
 ```
@@ -749,7 +715,6 @@ content: '\e583';
 .mui-ellipsis
 {
   overflow: hidden;
-  
   white-space: nowrap; /*文本不会换行，文本会在在同一行上继续*/
   text-overflow: ellipsis;
 }
