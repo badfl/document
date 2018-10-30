@@ -245,10 +245,14 @@ JavaScript中包含了一些类型的原始值：`String`、`Number`、`Boolean`
 都需要思考一下它们如何才能精确地表示出来。
 
 #### 字符串
-字符串应当始终使用**单引号**（避免使用双引号）且保持一行。避免在字符串中使用斜线另起一行。
+字符串应当始终使用**单引号**（避免使用双引号，需要转义的时候可以使用）且保持一行。避免在字符串中使用斜线
+另起一行。
 ```js
 // 好的写法
 var name = 'Badfl';
+
+// 好的写法：需要转义的时候，可以使用双引号
+var el = $("<div class='content'>")
 
 // 不好的写法：单引号
 var name = "Badfl";
@@ -599,16 +603,32 @@ if (condition) {
     statements
 }
 ```
-绝不允许在`if`语句中省略花括号。
+绝不允许在`if`语句中省略花括号，`else`关键字要与花括号保持在同一行。
 ```js
 // 好的写法
 if (condition) {
     doSomething();
 }
 
+// 好的写法：else关键字与花括号保持在同一行
+if (condition) {
+    doSomething();
+} else {
+    doSomethingElse();
+}
+
 // 不好的写法：不恰当的空格
 if(condition){
     doSomething();
+}
+
+// 不好的写法：else关键词换行
+if (condition) {
+    doSomething();
+}
+else
+{
+    doSomethingElse();
 }
 
 // 不好的写法：遗漏花括号
@@ -741,7 +761,7 @@ switch (value) {
         throw new Error("This shouldn't happen.");
 }
 ```
-如果一个`switch`语句不包含default情况，应当用一行注释代替。
+如果一个`switch`语句不包含`default`情况，应当用一行注释代替。
 ```js
 // 好的写法
 switch (value) {
@@ -756,6 +776,21 @@ switch (value) {
         return true;
 
     // 没有default
+}
+```
+不要定义重复的`case`分支
+```js
+// 不好的写法：重复定义case分支
+switch (value) {
+    case 1:
+        doSomething();
+        break;
+    case 1:
+        doSome();
+        break;
+
+    case 3:
+        return true;
 }
 ```
 
