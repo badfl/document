@@ -143,7 +143,15 @@ module.exports = {
                   {
                     text: 'html5+文档',
                     link: 'http://www.html5plus.org/doc/zh_cn/webview.html'
-                  }
+                  },
+                  {
+                    text: 'Android平台5+SDK API参考手册',
+                    link: 'http://www.dcloud.io/docs/sdk/android/'
+                  },
+                  {
+                    text: 'IOS平台5+SDK API参考手册',
+                    link: 'https://www.dcloud.io/docs/sdk/ios/'
+                  },
                 ]
               },
               {
@@ -169,11 +177,19 @@ module.exports = {
                   },
                   {
                     text: '安卓离线打包',
-                    link: 'https://ask.dcloud.net.cn/article/38'
+                    link: 'http://ask.dcloud.net.cn/article/508'
                   },
                   {
                     text: 'IOS离线打包',
                     link: 'https://ask.dcloud.net.cn/article/41'
+                  },
+                  {
+                    text: 'Android插件开发',
+                    link: 'https://ask.dcloud.net.cn/docs/#//ask.dcloud.net.cn/article/66'
+                  },
+                  {
+                    text: 'IOS插件开发',
+                    link: 'https://ask.dcloud.net.cn/docs/#//ask.dcloud.net.cn/article/67'
                   }
 
                 ]
